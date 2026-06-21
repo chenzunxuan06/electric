@@ -1,0 +1,375 @@
+{
+  "users": [
+    {
+      "id": "u001",
+      "username": "admin",
+      "password": "123456",
+      "name": "系统管理员",
+      "role": "admin"
+    },
+    {
+      "id": "u002",
+      "username": "manager",
+      "password": "123456",
+      "name": "业务负责人",
+      "role": "manager"
+    },
+    {
+      "id": "u003",
+      "username": "analyst",
+      "password": "123456",
+      "name": "数据分析员",
+      "role": "analyst"
+    },
+    {
+      "id": "u004",
+      "username": "user",
+      "password": "123456",
+      "name": "普通用户",
+      "role": "user"
+    },
+    {
+      "id": "u-1780289082567",
+      "username": "czx",
+      "password": "123456",
+      "name": "普通用户1",
+      "role": "user"
+    },
+    {
+      "id": "u-1780364071362",
+      "username": "admin2",
+      "password": "123456",
+      "name": "业务负责人czx",
+      "role": "manager"
+    },
+    {
+      "id": "u-1780364084111",
+      "username": "admin3",
+      "password": "123456",
+      "name": "数据分析员",
+      "role": "analyst"
+    }
+  ],
+  "assets": [
+    {
+      "id": "asset-001",
+      "name": "新能源发电曲线",
+      "owner": "山东某风电场",
+      "sensitivity": "中",
+      "status": "已确权",
+      "price": "1200",
+      "type": "power"
+    },
+    {
+      "id": "asset-002",
+      "name": "用户用电行为摘要",
+      "owner": "济南供电公司",
+      "sensitivity": "高",
+      "status": "已脱敏",
+      "price": 2400,
+      "type": "power"
+    },
+    {
+      "id": "asset-003",
+      "name": "电力交易统计数据",
+      "owner": "省交易中心",
+      "sensitivity": "低",
+      "status": "可共享",
+      "price": 800,
+      "type": "power"
+    }
+  ],
+  "chainRecords": [
+    {
+      "txHash": "0x19e873ee344",
+      "action": "隐私计算任务提交",
+      "actor": "系统管理员",
+      "time": "2026-06-02 15:31:46",
+      "detail": "新能源消纳评估"
+    },
+    {
+      "txHash": "0x8f21a",
+      "action": "数据确权",
+      "actor": "系统管理员",
+      "time": "2026-05-30 09:10:12",
+      "detail": "新能源发电曲线"
+    },
+    {
+      "txHash": "0x91bd2",
+      "action": "授权审批",
+      "actor": "业务负责人",
+      "time": "2026-05-30 09:18:50",
+      "detail": "用户用电行为摘要"
+    },
+    {
+      "txHash": "0xaa110",
+      "action": "隐私计算任务提交",
+      "actor": "数据分析员",
+      "time": "2026-05-30 09:24:30",
+      "detail": "新能源消纳评估"
+    }
+  ],
+  "privacyTasks": [
+    {
+      "id": "priv-1780385506115",
+      "name": "新能源消纳评估",
+      "scene": "新能源消纳",
+      "participants": "电网公司,发电企业",
+      "algorithm": "联邦学习",
+      "status": "completed",
+      "progress": 100,
+      "submittedAt": "2026-06-02 15:31:46",
+      "approvalStatus": "pending",
+      "summary": "已输出新能源消纳评估结果，建议优先调度午间高出力时段。",
+      "indicators": [
+        {
+          "name": "消纳率",
+          "value": "89.7%"
+        },
+        {
+          "name": "弃电率",
+          "value": "4.2%"
+        },
+        {
+          "name": "收益提升",
+          "value": "12.8%"
+        }
+      ],
+      "resultText": "已输出新能源消纳评估结果，建议优先调度午间高出力时段。",
+      "steps": [
+        "任务提交",
+        "审批联动",
+        "隐私协同",
+        "结果生成",
+        "报告导出",
+        "审计归档"
+      ]
+    },
+    {
+      "id": "priv-001",
+      "name": "新能源消纳评估",
+      "status": "running",
+      "progress": 76
+    },
+    {
+      "id": "priv-002",
+      "name": "电力交易风险分析",
+      "status": "completed",
+      "progress": 100,
+      "summary": "已输出新能源消纳评估结果，建议优先调度午间高出力时段。",
+      "indicators": [
+        {
+          "name": "消纳率",
+          "value": "89.7%"
+        },
+        {
+          "name": "弃电率",
+          "value": "4.2%"
+        },
+        {
+          "name": "收益提升",
+          "value": "12.8%"
+        }
+      ],
+      "resultText": "已输出新能源消纳评估结果，建议优先调度午间高出力时段。"
+    },
+    {
+      "id": "priv-003",
+      "name": "用户侧负荷预测",
+      "status": "queued",
+      "progress": 15
+    }
+  ],
+  "authRequests": [
+    {
+      "id": "ar-001",
+      "applicant": "济南供电公司",
+      "asset": "用户用电行为摘要",
+      "status": "approved",
+      "time": "2026-05-30 09:00:00"
+    },
+    {
+      "id": "ar-002",
+      "applicant": "省交易中心",
+      "asset": "电力交易统计数据",
+      "status": "pending",
+      "time": "2026-05-30 09:30:00"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log-1780387341383",
+      "action": "编辑资产",
+      "actor": "系统管理员",
+      "result": "成功",
+      "time": "2026-06-02 16:02:21"
+    },
+    {
+      "id": "log-1780387337678",
+      "action": "编辑资产",
+      "actor": "系统管理员",
+      "result": "成功",
+      "time": "2026-06-02 16:02:17"
+    },
+    {
+      "id": "log-1780385509651",
+      "action": "隐私任务完成",
+      "actor": "系统管理员",
+      "result": "成功",
+      "time": "2026-06-02 15:31:49"
+    },
+    {
+      "id": "log-1780385508645",
+      "action": "隐私任务完成",
+      "actor": "系统管理员",
+      "result": "成功",
+      "time": "2026-06-02 15:31:48"
+    },
+    {
+      "id": "log-1780385506116",
+      "action": "提交隐私任务",
+      "actor": "系统管理员",
+      "result": "成功",
+      "time": "2026-06-02 15:31:46"
+    },
+    {
+      "id": "log-1780381440142",
+      "action": "编辑资产",
+      "actor": "系统管理员",
+      "result": "成功",
+      "time": "2026-06-02 14:24:00"
+    },
+    {
+      "id": "log-1780381434703",
+      "action": "编辑资产",
+      "actor": "系统管理员",
+      "result": "成功",
+      "time": "2026-06-02 14:23:54"
+    },
+    {
+      "id": "log-1780289192866",
+      "action": "隐私任务完成",
+      "actor": "系统管理员",
+      "result": "成功",
+      "time": "2026-06-01 12:46:32"
+    },
+    {
+      "id": "log-1",
+      "action": "登录成功",
+      "actor": "系统管理员",
+      "result": "成功",
+      "time": "2026-05-30 09:02:00"
+    },
+    {
+      "id": "log-2",
+      "action": "授权审批",
+      "actor": "业务负责人",
+      "result": "成功",
+      "time": "2026-05-30 09:18:50"
+    },
+    {
+      "id": "log-3",
+      "action": "隐私计算任务提交",
+      "actor": "数据分析员",
+      "result": "成功",
+      "time": "2026-05-30 09:24:30"
+    }
+  ],
+  "financeMetrics": {
+    "electricityPrice": 0.42,
+    "cloudCost": 18000,
+    "dataCost": 9500,
+    "roi": 1.86,
+    "paybackMonths": 11.3,
+    "carbonReduction": 12.8
+  },
+  "roleDefs": [
+    {
+      "id": "role-admin",
+      "key": "admin",
+      "name": "管理员",
+      "desc": "系统全权限",
+      "perm": "用户管理 / 数据管理 / 审计 / 链上操作",
+      "modules": "工作台、资产、审批、日志、权限管理",
+      "permissions": [
+        "home:view",
+        "dashboard:view",
+        "user:view",
+        "user:create",
+        "user:update",
+        "user:delete",
+        "role:view",
+        "role:create",
+        "role:update",
+        "role:delete",
+        "asset:view",
+        "asset:create",
+        "asset:update",
+        "asset:delete",
+        "approval:view",
+        "approval:approve",
+        "privacy:view",
+        "privacy:create",
+        "privacy:complete",
+        "chain:view",
+        "audit:view",
+        "system:view",
+        "report:view"
+      ]
+    },
+    {
+      "id": "role-manager",
+      "key": "manager",
+      "name": "业务负责人",
+      "desc": "审批授权",
+      "perm": "授权审批 / 查看报表",
+      "modules": "工作台、资产、审批、日志",
+      "permissions": [
+        "home:view",
+        "dashboard:view",
+        "asset:view",
+        "approval:view",
+        "approval:approve",
+        "privacy:view",
+        "chain:view",
+        "audit:view",
+        "report:view"
+      ]
+    },
+    {
+      "id": "role-analyst",
+      "key": "analyst",
+      "name": "数据分析员",
+      "desc": "发起任务",
+      "perm": "隐私计算 / 智能问答 / 报告生成",
+      "modules": "工作台、资产、隐私计算、日志",
+      "permissions": [
+        "home:view",
+        "dashboard:view",
+        "asset:view",
+        "privacy:view",
+        "privacy:create",
+        "privacy:complete",
+        "chain:view",
+        "audit:view",
+        "report:view"
+      ]
+    },
+    {
+      "id": "role-user",
+      "key": "user",
+      "name": "普通用户",
+      "desc": "浏览与申请",
+      "perm": "查看资产 / 提交申请",
+      "modules": "工作台、资产、隐私计算、日志",
+      "permissions": [
+        "home:view",
+        "asset:view",
+        "privacy:view",
+        "chain:view",
+        "report:view",
+        "request:create"
+      ]
+    }
+  ]
+}
